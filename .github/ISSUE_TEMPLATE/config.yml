@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: 💬 Questions / Support
-    url: https://github.com/YOUR_USERNAME/YOUR_REPO/discussions
-    about: Ask questions here instead of opening issues
-  - name: 📌 Modrinth Page
-    url: https://modrinth.com/mod/raritykeep
-    about: Download the mod and view release notes
