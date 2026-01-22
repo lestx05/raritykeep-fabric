@@ -1,0 +1,104 @@
+name: 🐛 Bug Report
+description: Report a bug or something not working as expected
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please fill out everything below.
+        Incomplete reports may be closed if we can't reproduce the issue.
+
+  - type: input
+    id: mod_version
+    attributes:
+      label: RarityKeep Version
+      placeholder: "ex: 1.0.3"
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft_version
+    attributes:
+      label: Minecraft Version
+      placeholder: "ex: 1.21.11"
+    validations:
+      required: true
+
+  - type: input
+    id: loader_version
+    attributes:
+      label: Fabric Loader Version
+      placeholder: "ex: 0.16.10"
+    validations:
+      required: true
+
+  - type: input
+    id: fabric_api
+    attributes:
+      label: Fabric API Version (if installed)
+      placeholder: "ex: 0.110.0+1.21.11"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Tell us what you expected to happen vs what actually happened.
+      placeholder: "Expected: ... | Actual: ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Give clear steps so we can reproduce the issue.
+      placeholder: |
+        1. Install the mod
+        2. Create a new world
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Singleplayer
+        - Multiplayer (Server)
+        - LAN
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Crash Report
+      description: Paste logs here or upload a file. Include latest.log or crash report.
+      placeholder: "Drag & drop log file or paste it here..."
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: modlist
+    attributes:
+      label: Mod list (important!)
+      description: If you use other mods, list them here. Conflicts are common.
+      placeholder: "Fabric API, ModMenu, ... "
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked that I'm using the latest version of RarityKeep
+          required: true
+        - label: I can reproduce this issue consistently
+          required: false
