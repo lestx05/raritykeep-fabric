@@ -1,0 +1,48 @@
+name: ✨ Feature Request
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature ideas are welcome.
+        Please be clear so we can understand what you want and why.
+
+  - type: textarea
+    id: feature
+    attributes:
+      label: What do you want added or improved?
+      placeholder: "Example: Add tag support like #raritykeep:relics..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Why is this needed?
+      description: Explain what problem this feature solves.
+      placeholder: "It helps because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: How should it work?
+      description: Describe expected behavior, UI, rules, etc.
+      placeholder: "When the player..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (your opinion)
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: false
